@@ -39,8 +39,50 @@
 
 //6
 
-const aud = 75;
-const eur = 95;
+// const eur = 0.95;
 
-let dollar = prompt("Сколько долларов перевести в евро?");
-let result = 
+// let dollar = prompt("Сколько долларов перевести в евро?", 0);
+// let result = dollar * eur + ' Евро';
+
+// alert(result);
+
+
+
+//7
+
+// const userFile = 820;
+
+// let flash = Number(prompt('Введите объем флешки в ГБ', 0));
+
+// let result = flash * 1000 / userFile;
+
+// alert(`${parseInt(result)} файлов вместиться на вашей флешке`);
+
+
+//8
+
+// let cash = Number(prompt('Введите сумму денег в кошельке', 0));
+// let price = Number(prompt('Введите стоимсть шоколадки', 0));
+
+// let result = cash / price;
+// let a = cash % result;
+
+// alert(`вы можете купить ${parseInt(result)} шоколадок, ваша сдача ${Math.ceil(a)} рубасиков`);
+
+//9
+
+// let num = Number(prompt('Введите трёхзначное число', 0));
+
+// let num1 = Math.trunc(num / 100);
+// let num2 = Math.trunc((num % 100) / 10);
+
+// let num3 = num % Math.trunc(num / 10);
+
+// let result = (num3 * 100) + (num2 * 10) + num1;
+// alert(result);
+
+//10
+
+// let num = Number(prompt('Введите целое число', 0));
+
+// num % 2 == 0 ? alert('Четное') : alert('Нечетное');
