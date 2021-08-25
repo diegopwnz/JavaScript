@@ -1,88 +1,98 @@
-// 1
-// let userName = prompt("ВВедите ваше имя");
-// alert(userName);
+//1 
 
+// let start = Number(prompt('Введитте цифру начала диапазона:', 0));
+// let end = Number(prompt('Введите цифру конца диапазона:', 0));
+// let sum = 9;
 
-// 2
+// while (start <= end) {
+// 	sum += start;
+// 	start++;
+// }
 
-// const currentYear = 2021;
-// let age = prompt("Введите ваш год рождения");
+// alert(sum);
 
-// let result = currentYear - age;
-// alert(`Вам ${result} лет`);
+//2
+
+// let num1 = prompt('Введите первое число:', 0);
+// let num2 = prompt('Введите второе число:', 0);
+
+// let num3;
+
+// function calc(a, b) {
+// 	let c;
+// 	while (a != b) {
+// 		if (a > b) {
+// 			a = a - b;
+// 		} else if (a < b) {
+// 			c = a;
+// 			a = b;
+// 			b = c;
+// 		}
+
+// 	}
+// 	return num3 = a
+// }
+
+// calc(num1, num2);
+// alert(`НОД чисел ${num1} и ${num2} будет ${num3}`);
+
 
 //3
 
-// let squareLegnth = prompt("Введите длинну квадрат");
+// let arr = [];
+// let num = prompt('Введите число');
+// if (num < 0) {
+// 	num = num * -1;
+// }
+// for (let i = 1; i <= num; i++) {
+// 	if (num % i == 0) {
+// 		arr.push(i);
+// 		arr.push(i * -1);
+// 	}
+// }
 
-// let result = squareLegnth * 4;
-// alert(`Пермиетр квадрата равен ${result}`);
+// alert(`Делители числа ${num}: ${arr}`);
 
-//4
+//4 
+// let num = prompt('Введите число:', 0);
 
-// let radius = prompt("Введите радиус окружности");
-
-// const pi = 3.14;
-
-// let result = pi * radius;
-// alert(`Площадь окружности равна ${result}`);
-
+// function getDigitLength(n) {
+// 	let a = 0;
+// 	while (a < n.length) a++;
+// 	return a;
+// }
+// alert(getDigitLength(num));
 
 //5
 
-// let distance = prompt("Введите расстояние между городами");
-// let time = prompt("За какое время хотите добраться");
 
-// let speed = distance / time;
-// alert(`Нужно двигаться со скоростью ${speed}км/ч что бы успеть вовремя `)
+// let positive = 0;
+// let negative = 0;
+// let zero = 0;
 
+
+// for (let i = 0; i < 10; i++) {
+// 	let num = prompt('Введите 10 чисел по одному за раз', 0);
+
+// 	if (num > 0) {
+// 		positive++;
+// 	} else if (num < 0) {
+// 		negative++;
+// 	} else {
+// 		zero++;
+// 	}
+// }
+
+// if (positive > 0) {
+// 	console.log('Количествво положительных:' + positive);
+// }
+// if (positive > 0) {
+// 	console.log('Количество отрицательных:' + negative);
+// } else {
+// 	console.log('Отрицательных чисел нет');
+// }
+// if (positive > 0) {
+// 	console.log('Количество нулей:' + zero);
+// }
 
 //6
-
-// const eur = 0.95;
-
-// let dollar = prompt("Сколько долларов перевести в евро?", 0);
-// let result = dollar * eur + ' Евро';
-
-// alert(result);
-
-
-
-//7
-
-// const userFile = 820;
-
-// let flash = Number(prompt('Введите объем флешки в ГБ', 0));
-
-// let result = flash * 1000 / userFile;
-
-// alert(`${parseInt(result)} файлов вместиться на вашей флешке`);
-
-
-//8
-
-// let cash = Number(prompt('Введите сумму денег в кошельке', 0));
-// let price = Number(prompt('Введите стоимсть шоколадки', 0));
-
-// let result = cash / price;
-// let a = cash % result;
-
-// alert(`вы можете купить ${parseInt(result)} шоколадок, ваша сдача ${Math.ceil(a)} рубасиков`);
-
-//9
-
-// let num = Number(prompt('Введите трёхзначное число', 0));
-
-// let num1 = Math.trunc(num / 100);
-// let num2 = Math.trunc((num % 100) / 10);
-
-// let num3 = num % Math.trunc(num / 10);
-
-// let result = (num3 * 100) + (num2 * 10) + num1;
-// alert(result);
-
-//10
-
-// let num = Number(prompt('Введите целое число', 0));
-
-// num % 2 == 0 ? alert('Четное') : alert('Нечетное');
