@@ -96,3 +96,90 @@
 // }
 
 //6
+
+
+// do {
+// 	let a = +prompt('Введите первое число', 0);
+// 	let b = +prompt('Введите второе число', 0);
+// 	let i = prompt('Введите знак -,+,/,*', 0);
+
+// 	switch (i) {
+// 		case '+':
+// 			alert(a + b);
+// 			break;
+// 		case '-':
+// 			alert(a - b);
+// 			break;
+// 		case '/':
+// 			alert(a / b);
+// 			break;
+// 		case '*':
+// 			alert(a * b);
+// 		default:
+// 			break;
+// 	}
+
+// }
+// while (confirm('Хотите ли вы решить еще один пример?'));
+
+//7
+
+
+
+// let arr = prompt('Введите число, например 123456');
+// let count = prompt('На сколько элементов его сдвинуть?');
+// let a = arr.split('');
+
+// for (let i = 0; i < count; i++) {
+// 	a.unshift(a.pop());
+// }
+// console.log(a);
+
+
+//8
+
+// const days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+// let currDay = 0;
+
+// while (confirm(`${days[currDay]}. Хотите увидеть следующий день?`)) {
+// 	currDay = (currDay + 1) % days.length;
+// }
+
+//9
+
+// let result = 'x ';
+// for (let i = 0; i < 11; i++) {
+
+// 	for (let j = 0; j < 11; j++) {
+
+// 		if (i == 0 && j > 0) {
+// 			result += '[' + j + ']';
+// 		} else if (j == 0 && i > 0) {
+// 			result += '[' + i + '] ';
+// 		} else if (i > 0 && j > 0) {
+// 			result += (i * j) + ' ';
+// 		}
+// 	}
+// 	result += '\n'
+// }
+
+// console.log(result);
+
+//10
+
+// let odin = prompt('Введите число от 1 до 100', 0);
+// let dva = prompt('Угадайте число от 1 до 100', 0);
+// let one = parseInt(odin);
+// let two = parseInt(dva);
+
+// if (two < one) {
+// 	a = "Больше"
+// };
+// if (two > one) {
+// 	a = "Меньше"
+// };
+// if (two == one) {
+// 	a = "Угадал"
+// };
+
+// alert(a);
