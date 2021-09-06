@@ -1,88 +1,77 @@
-// 1
-// let userName = prompt("ВВедите ваше имя");
-// alert(userName);
+//1
 
+// let one = +prompt('Введите первое число', 0);
+// let two = +prompt('Введите второе число', 0);
 
-// 2
+// function calc(a, b) {
+// 	if (a < b) {
+// 		return '-1'
+// 	} else if (a > b) {
+// 		return 1;
+// 	} else if (a == b) {
+// 		return 0;
+// 	}
+// }
+// alert(calc(one, two));
 
-// const currentYear = 2021;
-// let age = prompt("Введите ваш год рождения");
+//2
 
-// let result = currentYear - age;
-// alert(`Вам ${result} лет`);
+// function factorial(n) {
+// 	return (n != 1) ? n * factorial(n - 1) : 1;
+// }
+
+// alert(factorial(5));
 
 //3
 
-// let squareLegnth = prompt("Введите длинну квадрат");
+// function number(a, b, c) {
+// 	let e = +('' + a + b + c)
+// 	return e
+// }
+// console.log(number(1, 2, 3));
 
-// let result = squareLegnth * 4;
-// alert(`Пермиетр квадрата равен ${result}`);
 
 //4
 
-// let radius = prompt("Введите радиус окружности");
+// function rectangle(a, b = 0) {
+// 	if (b == 0) {
+// 		return a ** 2;
+// 	}
+// 	return a * b;
+// }
 
-// const pi = 3.14;
-
-// let result = pi * radius;
-// alert(`Площадь окружности равна ${result}`);
+// console.log(rectangle(2));
+// console.log(rectangle(2, 4));
 
 
 //5
 
-// let distance = prompt("Введите расстояние между городами");
-// let time = prompt("За какое время хотите добраться");
-
-// let speed = distance / time;
-// alert(`Нужно двигаться со скоростью ${speed}км/ч что бы успеть вовремя `)
 
 
-//6
-
-// const eur = 0.95;
-
-// let dollar = prompt("Сколько долларов перевести в евро?", 0);
-// let result = dollar * eur + ' Евро';
-
-// alert(result);
-
-
+//6 
 
 //7
 
-// const userFile = 820;
 
-// let flash = Number(prompt('Введите объем флешки в ГБ', 0));
+// function setTime(h) {
+// 	return function setMinutes(m = 0) {
+// 		return function setSeconds(s = 0) {
+// 			return `${h}:${m}:${s}`
+// 		}
+// 	}
+// }
 
-// let result = flash * 1000 / userFile;
+// let time = setTime(22)()(16);
+// console.log(time);
 
-// alert(`${parseInt(result)} файлов вместиться на вашей флешке`);
 
+//8 
 
-//8
+h = +prompt('часы');
+m = +prompt('минуты');
+s = +prompt('секунды');
 
-// let cash = Number(prompt('Введите сумму денег в кошельке', 0));
-// let price = Number(prompt('Введите стоимсть шоколадки', 0));
-
-// let result = cash / price;
-// let a = cash % result;
-
-// alert(`вы можете купить ${parseInt(result)} шоколадок, ваша сдача ${Math.ceil(a)} рубасиков`);
-
-//9
-
-// let num = Number(prompt('Введите трёхзначное число', 0));
-
-// let num1 = Math.trunc(num / 100);
-// let num2 = Math.trunc((num % 100) / 10);
-
-// let num3 = num % Math.trunc(num / 10);
-
-// let result = (num3 * 100) + (num2 * 10) + num1;
-// alert(result);
-
-//10
-
-// let num = Number(prompt('Введите целое число', 0));
-
-// num % 2 == 0 ? alert('Четное') : alert('Нечетное');
+function seconds(a, b, c) {
+	return (h * 3600) + (m * 60) + s
+}
+alert(seconds(h, m, s))
