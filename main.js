@@ -1,169 +1,80 @@
 //1
 
-// let age = Number(prompt('Введите свой возраст', 0));
+// function pow(a, b) {
+// 	return (b != 1) ? a * pow(a, b - 1) : a;
+// }
 
-// if (age <= 0 || age <= 11) {
-// 	alert('Вы ребенок');
-// } else if (age <= 12 || age <= 17) {
-// 	alert('Вы подросток');
-// } else if (age <= 18 || age <= 59) {
-// 	alert('Вы взрослый');
-// } else if (age > 60) {
-// 	alert('С вас сыпеться песок');
-// };
+// console.log(pow(5, 2));
 
-// 2
+//2
 
-// let num = prompt('Введите число от 0 до 9', 0);
+// function getNod(a, b) {
+// 	a > b || ([a, b] = [b, a]);
+// 	let len = b / 2,
+// 		i = 2,
+// 		k = 1;
+// 	return (function f() {
+// 		if (i === len) return k;
+// 		if (!(b % i) && !(a % i)) {
+// 			b /= i;
+// 			a /= i;
+// 			k *= i;
+// 			return f()
+// 		} else {
+// 			++i;
+// 			return f()
+// 		}
+// 	})();
+// }
+// console.log(getNod(10, 30));
 
-
-// switch (num) {
-// 	case '0':
-// 		alert(')');
-// 		break
-
-// 	case '1':
-// 		alert('!');
-// 		break
-
-// 	case '2':
-// 		alert('@');
-// 		break
-
-// 	case '3':
-// 		alert('#');
-// 		break
-
-// 	case '4':
-// 		alert('$');
-// 		break
-
-// 	case '5':
-// 		alert('%');
-// 		break
-
-// 	case '6':
-// 		alert('^');
-// 		break
-
-// 	case '7':
-// 		alert('&');
-// 		break
-
-// 	case '8':
-// 		alert('*');
-// 		break
-
-// 	case '9':
-// 		alert('(');
-// 		break
-
-// 	default:
-// 		alert('ERROR');
-// 		break
-// };
 
 //3
 
+// function findMax(a, _max = -Infinity) {
+// 	const str = (a + '');
+// 	return str.length > 1 ?
+// 		findMax(str.slice(1), Math.max(str[0], _max)) :
+// 		+Math.max(str[0], _max);
+// }
 
-// let num = +prompt('Введите трёхзначное число:', 0);
+// console.log(findMax(56789));
 
-// let num1 = Math.trunc(num / 100);
-// let num2 = Math.trunc(num / 10) % 10;
-// let num3 = Math.trunc(num % 10);
 
-// if (num1 == num2 || num1 == num3 || num2 == num3) {
-// 	alert('Числа повторяються');
-// } else {
-// 	alert('Числа не повторяються');
-// };
+//4 
 
-//4
+// function isPrime(num, div = 3) {
+// 	if (num === 2) return true;
+// 	if (num < 2 || num % 2 === 0) return false;
+// 	if (div * div > num) return true;
+// 	if (num % div === 0) return false;
+// 	return isPrime(num, div + 2);
+// }
 
-// let num = prompt('Введите год', 0);
-
-// if (num % 4 == 0 && num % 100 !== 0) {
-// 	alert('Високосный год');
-// } else {
-// 	alert('Не високосный год');
-// };
+// console.log(isPrime(1));
 
 //5
 
-// let num = prompt('Введите пятиразрядное число', 0);
+// function factors(a, arr = [], b = 2) {
+// 	if (b > Math.sqrt(a)) {
+// 		arr.push(a);
+// 		return arr;
+// 	} else if (a % b == 0) {
+// 		arr.push(b);
+// 		factors(a / b, arr, b);
+// 	} else {
+// 		factors(a, arr, ++b);
+// 	}
+// 	return arr.join("*");
+// }
 
-// if (num === num.split('').reverse().join('')) {
-// 	alert('Паллиндром');
-// } else {
-// 	alert('Не Паллиндром');
-// };
+// console.log(factors(72));
 
 //6
 
-// let amount = prompt('Введите количество RUB', 0);
-// let currency = prompt('EUR = 1, UAH = 2, AZN = 3', 0);
-
-// switch (currency) {
-// 	case '1':
-// 		alert(amount * 0.85 + 'EUR');
-// 		break
-// 	case '2':
-// 		alert(amount * 2.5 + 'UAH');
-// 		break
-// 	case '3':
-// 		alert(amount * 43 + 'AZN');
-// };
-
-
-//7
-
-// let sum = prompt('Введите суммму покупки', 0);
-
-// if (sum >= 200 && sum < 300) {
-// 	alert(sum / 100 * 97 + `Руб учитывая скидку 3%`);
-// } else if (sum >= 300 && sum < 500) {
-// 	alert(sum / 100 * 95 + 'Руб учитывая скидку 5%');
-// } else if (sum >= 500) {
-// 	alert(sum / 100 * 93 + 'Руб учитывая скидку 7%');
-// };
-
-//8 
-
-// let circle = prompt('ВВедите длину окружности:', 0);
-// let square = prompt('Введите периметр квадрата:', 0);
-
-// if (square <= circle / 2) {
-// 	alert('Помещаеться');
-// } else {
-// 	alert('Не помещаеться');
+// function fib(n) {
+// 	if (n == 1 || n == 2) return 1;
+// 	else return fib(n - 2) + fib(n - 1);
 // }
-
-//9
-
-// let ukraina = prompt('Украина це?  1 - Россия, 2 - Европпа, 3 - Це ми!', 0);
-// let russia = prompt('Россия? 1 - matreshka 2 - vodka  3 - putin', 0);
-// let time = prompt('Какое сейчас время?  1 - Время первых 2 - 17:30  3 - Время писать код', 0);
-
-// let score = 0;
-
-// if (ukraina == 2){
-// 	score += 2;
-// };
-
-// if (russia == 3) {
-// score +=2;
-// };
-
-// if(time == 3){
-// 	score +=2;
-// };
-
-// alert(`Вы набрали ${score} балла, поздравляю!`);
-
-//10 
-
-// let date = prompt('Введите дату: День-Месяц-Год ');
-// date = date.split('-');
-// let oldDate = new Date(date[2], date[1] - 1, date[0]);
-// oldDate.setDate(oldDate.getDate() + 1);
-// alert(oldDate);
+// let userNum = +prompt('Введите порядковый номер числа Фибоначчи');
+// alert(fib(userNum));
