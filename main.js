@@ -1,169 +1,167 @@
 //1
 
-// let age = Number(prompt('Введите свой возраст', 0));
+// function stringInfo(string) {
+// 	let str = string
+// 	const sumNumbers = str.match(/\d+/g).join('').length;
+// 	const sumLetters = str.match(/[a-z]/gi).join('').length;
+// 	console.log(sumNumbers, sumLetters);
+// }
 
-// if (age <= 0 || age <= 11) {
-// 	alert('Вы ребенок');
-// } else if (age <= 12 || age <= 17) {
-// 	alert('Вы подросток');
-// } else if (age <= 18 || age <= 59) {
-// 	alert('Вы взрослый');
-// } else if (age > 60) {
-// 	alert('С вас сыпеться песок');
-// };
-
-// 2
-
-// let num = prompt('Введите число от 0 до 9', 0);
+// stringInfo('dsadokwqopkdapop121312451985');
 
 
-// switch (num) {
-// 	case '0':
-// 		alert(')');
-// 		break
+//2
 
-// 	case '1':
-// 		alert('!');
-// 		break
 
-// 	case '2':
-// 		alert('@');
-// 		break
+// function textNumber(number) {
+// 	const dict = [
+// 		['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять', 'десять', '', 'две', '', 'четыр', 'пят', 'шест', 'сем', 'восем', 'девят'],
+// 		['', '', 'двадцать', 'тридцать', 'сорок', '', '', '', '', 'девяносто']
+// 	];
+// 	if (number >= 0 && number <= 10)
+// 		return dict[0][number];
+// 	if (number > 10 && number <= 19)
+// 		return (dict[0][number] || dict[0][number - 10]) + 'надцать';
+// 	if (number >= 20 && number <= 99) {
+// 		const [units = 0, tens] = [...('' + number)].reverse().map(Number);
+// 		return [
+// 			tens ? dict[1][tens] || (dict[0][tens] + 'десят') : '',
+// 			units ? dict[0][units] : ''
+// 		].join(' ');
+// 	}
+// }
 
-// 	case '3':
-// 		alert('#');
-// 		break
+// console.log(textNumber(15))
 
-// 	case '4':
-// 		alert('$');
-// 		break
-
-// 	case '5':
-// 		alert('%');
-// 		break
-
-// 	case '6':
-// 		alert('^');
-// 		break
-
-// 	case '7':
-// 		alert('&');
-// 		break
-
-// 	case '8':
-// 		alert('*');
-// 		break
-
-// 	case '9':
-// 		alert('(');
-// 		break
-
-// 	default:
-// 		alert('ERROR');
-// 		break
-// };
 
 //3
 
+// function replaceLetter(str) {
+// 	let result = "";
+// 	for (let c of str)
+// 		result += c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
 
-// let num = +prompt('Введите трёхзначное число:', 0);
+// 	return result;
+// }
 
-// let num1 = Math.trunc(num / 100);
-// let num2 = Math.trunc(num / 10) % 10;
-// let num3 = Math.trunc(num % 10);
+// console.log(replaceLetter('JavaScript'))
 
-// if (num1 == num2 || num1 == num3 || num2 == num3) {
-// 	alert('Числа повторяються');
-// } else {
-// 	alert('Числа не повторяються');
-// };
 
 //4
 
-// let num = prompt('Введите год', 0);
+// function camelize(str) {
+// 	return str
+// 		.split('-')
+// 		.map(
 
-// if (num % 4 == 0 && num % 100 !== 0) {
-// 	alert('Високосный год');
-// } else {
-// 	alert('Не високосный год');
-// };
+// 			(word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+// 		)
+// 		.join('');
+// }
+
+// console.log(camelize('-webkit-transition'))
 
 //5
 
-// let num = prompt('Введите пятиразрядное число', 0);
+// function acronym(words) {
+// 	if (!words) {
+// 		return '';
+// 	}
 
-// if (num === num.split('').reverse().join('')) {
-// 	alert('Паллиндром');
-// } else {
-// 	alert('Не Паллиндром');
-// };
+// 	let first_letter = function (x) {
+// 		if (x) {
+// 			return x[0];
+// 		} else {
+// 			return '';
+// 		}
+// 	};
 
-//6
+// 	return words.split(' ').map(first_letter).join('');
+// }
 
-// let amount = prompt('Введите количество RUB', 0);
-// let currency = prompt('EUR = 1, UAH = 2, AZN = 3', 0);
+// console.log(acronym('Cascading Style Sheets'))
 
-// switch (currency) {
-// 	case '1':
-// 		alert(amount * 0.85 + 'EUR');
-// 		break
-// 	case '2':
-// 		alert(amount * 2.5 + 'UAH');
-// 		break
-// 	case '3':
-// 		alert(amount * 43 + 'AZN');
-// };
+
+//6 
+// function longLine(...strings) {
+// 	let n = strings.length;
+// 	let newText = "";
+// 	for (let i = 0; i < n; i++) {
+// 		let text = strings[i];
+// 		newText += text;
+// 	}
+// 	return newText;
+// }
+
+// function longLineBig() {
+// 	let n = prompt("Ввести количество строк, которое нужно добавить: ");
+// 	let strings = [];
+// 	for (let i = 1; i <= n; i++) {
+// 		let text = prompt("Ввод строки №" + i + " : ");
+// 		strings.push(text);
+// 	}
+// 	alert(longLine(...strings));
+// }
+
+// longLineBig();
 
 
 //7
 
-// let sum = prompt('Введите суммму покупки', 0);
 
-// if (sum >= 200 && sum < 300) {
-// 	alert(sum / 100 * 97 + `Руб учитывая скидку 3%`);
-// } else if (sum >= 300 && sum < 500) {
-// 	alert(sum / 100 * 95 + 'Руб учитывая скидку 5%');
-// } else if (sum >= 500) {
-// 	alert(sum / 100 * 93 + 'Руб учитывая скидку 7%');
-// };
+//8
 
-//8 
+// function task8(url) {
+// 	let arr1;
+// 	let protocol;
+// 	let domain;
+// 	let arr2;
+// 	let way;
+// 	arr1 = url.split("://");
 
-// let circle = prompt('ВВедите длину окружности:', 0);
-// let square = prompt('Введите периметр квадрата:', 0);
+// 	protocol = arr1[0];
+// 	arr2 = arr1[1].split("/");
+// 	domain = arr2[0];
 
-// if (square <= circle / 2) {
-// 	alert('Помещаеться');
-// } else {
-// 	alert('Не помещаеться');
+// 	arr2.shift();
+// 	way = arr2.join("/");
+
+// 	return "Информация\nпротокол: " + protocol +
+// 		"\nдомен: " + domain + "\nпуть: " + way;
 // }
+
+// console.log(task8('https://itstep.org/ua/about'))
+
 
 //9
 
-// let ukraina = prompt('Украина це?  1 - Россия, 2 - Европпа, 3 - Це ми!', 0);
-// let russia = prompt('Россия? 1 - matreshka 2 - vodka  3 - putin', 0);
-// let time = prompt('Какое сейчас время?  1 - Время первых 2 - 17:30  3 - Время писать код', 0);
+// let stringDelimiter = function (sampleInput, delimiter) {
+// 	let stringArray = [''];
+// 	let j = 0;
 
-// let score = 0;
+// 	for (let i = 0; i < sampleInput.length; i++) {
+// 		if (sampleInput.charAt(i) == delimiter) {
+// 			j++;
+// 			stringArray.push('');
+// 		} else {
+// 			stringArray[j] += sampleInput.charAt(i);
+// 		}
+// 	}
+// 	return stringArray;
+// }
 
-// if (ukraina == 2){
-// 	score += 2;
-// };
+// console.log(stringDelimiter('10/08/2020', '/'))
 
-// if (russia == 3) {
-// score +=2;
-// };
+//10
 
-// if(time == 3){
-// 	score +=2;
-// };
+// const print = (sourceString, ...args) => {
+// 	let newString = sourceString;
 
-// alert(`Вы набрали ${score} балла, поздравляю!`);
+// 	args.forEach((item, index) => {
+// 		newString = newString.replace(`%${index + 1}`, item);
+// 	});
+// 	return newString
+// }
 
-//10 
-
-// let date = prompt('Введите дату: День-Месяц-Год ');
-// date = date.split('-');
-// let oldDate = new Date(date[2], date[1] - 1, date[0]);
-// oldDate.setDate(oldDate.getDate() + 1);
-// alert(oldDate);
+// console.log(print(('Today is % 1 % 2. % 3. % 4', 'Monday', 10,
+// 	8, 2020)))
