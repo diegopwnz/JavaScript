@@ -1,0 +1,14 @@
+.modal {
+	/* display: none; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 400px;
+	margin: 0 auto;
+	background-color: rgb(123, 196, 209);
+}
+
+.hidden {
+	display: none;
+}

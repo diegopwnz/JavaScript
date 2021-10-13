@@ -1,0 +1,13 @@
+#field {
+	background: url(img/depositphotos_69665391-stock-photo-top-view-of-soccer-field.jpg) no-repeat;
+	width: 600px;
+	height: 400px;
+	position: relative;
+}
+
+#ball {
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: 1s all;
+}
