@@ -1,167 +1,88 @@
-//1
+// 1
 
-// function stringInfo(string) {
-// 	let str = string
-// 	const sumNumbers = str.match(/\d+/g).join('').length;
-// 	const sumLetters = str.match(/[a-z]/gi).join('').length;
-// 	console.log(sumNumbers, sumLetters);
-// }
-
-// stringInfo('dsadokwqopkdapop121312451985');
+// let name = prompt('Введите ваше имя');
+// alert(`Привет, тебя зовут ${name}`);
 
 
-//2
+
+// 2
+
+// let year = prompt('Введите ваш год рождения');
+// const currentYear = 2021;
+// let age = currentYear - year;
+
+// alert(`Ваш возраст ${age} лет`)
 
 
-// function textNumber(number) {
-// 	const dict = [
-// 		['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять', 'десять', '', 'две', '', 'четыр', 'пят', 'шест', 'сем', 'восем', 'девят'],
-// 		['', '', 'двадцать', 'тридцать', 'сорок', '', '', '', '', 'девяносто']
-// 	];
-// 	if (number >= 0 && number <= 10)
-// 		return dict[0][number];
-// 	if (number > 10 && number <= 19)
-// 		return (dict[0][number] || dict[0][number - 10]) + 'надцать';
-// 	if (number >= 20 && number <= 99) {
-// 		const [units = 0, tens] = [...('' + number)].reverse().map(Number);
-// 		return [
-// 			tens ? dict[1][tens] || (dict[0][tens] + 'десят') : '',
-// 			units ? dict[0][units] : ''
-// 		].join(' ');
-// 	}
-// }
+// 3
 
-// console.log(textNumber(15))
+// let squareLength = prompt('Введите длинну квадрата');
+
+// let perimetr = squareLength * 4;
+
+// alert(`Периметр квадрата равен = ${perimetr}`);
 
 
-//3
+// 4
 
-// function replaceLetter(str) {
-// 	let result = "";
-// 	for (let c of str)
-// 		result += c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
+// let radius = prompt('Введите радиус окружности');
 
-// 	return result;
-// }
+// const pi = Math.PI;
 
-// console.log(replaceLetter('JavaScript'))
+// let square = pi * (radius ** 2);
 
+// alert(`Площадь окружности равна ${Math.round(square)}`);
 
-//4
+// 5
 
-// function camelize(str) {
-// 	return str
-// 		.split('-')
-// 		.map(
+// let distance = prompt('Введите расстояние в км между двумя городами');
+// let time = prompt('За сколько часов необходимо добратся?');
 
-// 			(word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
-// 		)
-// 		.join('');
-// }
-
-// console.log(camelize('-webkit-transition'))
-
-//5
-
-// function acronym(words) {
-// 	if (!words) {
-// 		return '';
-// 	}
-
-// 	let first_letter = function (x) {
-// 		if (x) {
-// 			return x[0];
-// 		} else {
-// 			return '';
-// 		}
-// 	};
-
-// 	return words.split(' ').map(first_letter).join('');
-// }
-
-// console.log(acronym('Cascading Style Sheets'))
+// let speed = distance / time;
+// alert(`Вам необходимо ехать со скоростью ${speed}км/час, что бы успеть вовремяя`);
 
 
-//6 
-// function longLine(...strings) {
-// 	let n = strings.length;
-// 	let newText = "";
-// 	for (let i = 0; i < n; i++) {
-// 		let text = strings[i];
-// 		newText += text;
-// 	}
-// 	return newText;
-// }
+//6
 
-// function longLineBig() {
-// 	let n = prompt("Ввести количество строк, которое нужно добавить: ");
-// 	let strings = [];
-// 	for (let i = 1; i <= n; i++) {
-// 		let text = prompt("Ввод строки №" + i + " : ");
-// 		strings.push(text);
-// 	}
-// 	alert(longLine(...strings));
-// }
+// const eur = 82.22;
+// const dollar = 71.81;
 
-// longLineBig();
+// let currency = prompt('Введиите количество долларов которые хотите перевести в евро');
 
+// let sum = (currency * dollar) / eur;
+// alert(`из ${currency} долларов получится ${sum} евро`);
 
 //7
 
+// let flesh = prompt('Введите объем флешки в ГБ');
+// const gb = 1000;
+// const file = 820;
+
+// let sum = (flesh * gb) / file;
+// alert(`${Math.floor(sum)} файлов размером ${file}МБ поместится на вашу флешку`)
 
 //8
 
-// function task8(url) {
-// 	let arr1;
-// 	let protocol;
-// 	let domain;
-// 	let arr2;
-// 	let way;
-// 	arr1 = url.split("://");
-
-// 	protocol = arr1[0];
-// 	arr2 = arr1[1].split("/");
-// 	domain = arr2[0];
-
-// 	arr2.shift();
-// 	way = arr2.join("/");
-
-// 	return "Информация\nпротокол: " + protocol +
-// 		"\nдомен: " + domain + "\nпуть: " + way;
-// }
-
-// console.log(task8('https://itstep.org/ua/about'))
+// let money = prompt('Введите сумму денег в кошельке');
+// let price = prompt('Введите цену шоколадки');
+// let sum = money / price;
+// let remainder = money % price;
+// alert(`вы можете купить ${Math.floor(sum)} шоколадок и у вас останется сдача ${remainder} рублей`);
 
 
-//9
+// 9
 
-// let stringDelimiter = function (sampleInput, delimiter) {
-// 	let stringArray = [''];
-// 	let j = 0;
+// let number = prompt('Введите трехзначное число');
 
-// 	for (let i = 0; i < sampleInput.length; i++) {
-// 		if (sampleInput.charAt(i) == delimiter) {
-// 			j++;
-// 			stringArray.push('');
-// 		} else {
-// 			stringArray[j] += sampleInput.charAt(i);
-// 		}
-// 	}
-// 	return stringArray;
-// }
+// let one = number % 10;
+// let two = Math.floor((number % 100) / 10);
+// let three = Math.floor((number % 1000) / 100);
 
-// console.log(stringDelimiter('10/08/2020', '/'))
+// alert(`${one}${two}${three}`)
 
-//10
 
-// const print = (sourceString, ...args) => {
-// 	let newString = sourceString;
+// 10
+// let number = prompt('Введите целое число');
+// let evenOrNot = number % 2 === 0;
 
-// 	args.forEach((item, index) => {
-// 		newString = newString.replace(`%${index + 1}`, item);
-// 	});
-// 	return newString
-// }
-
-// console.log(print(('Today is % 1 % 2. % 3. % 4', 'Monday', 10,
-// 	8, 2020)))
+// alert(`Четное или не четное? ${evenOrNot}`)
