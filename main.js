@@ -1,66 +1,132 @@
-// let maxSpeed = 0;
-// let dayOfWeek = 0;
+//1
+// let num = prompt('Введите число');
 
-// let calc = 2+ (6/(1+2));
-// console.log(calc)
-
-// let num = +prompt('Введите число');
-
-// if(num = 0 || num <= 9 || num < 0){
-//     alert(true)
-// } else {
-//     alert(false)
-// }
-
-
-// x = prompt('vvedi');
-
-// if (x == null || x == ''){
-//     alert('pustota')
-// } else  if( x == 10){
-//     alert('vse zaebok')
+// if(num > 0){
+//     alert('Число положительное');
 // } else{
-//     alert('putin vor')
+//     alert('Число отрицательное')
 // }
 
-// let x = undefined;
-// let x = false
+//2
 
-// if (typeof x == 'boolean'){
-//     x = 35;
-// }
-
-// alert(x)
-
-// let x = prompt('vvedi ceny');
-// let a = 0;
-
-// if(x > 1000){
-//     x = x / 100 * 90
-//  a = x / 90 * 10
-// }
-// alert(`${x}, скидка ${a} `)
-
-
-// let x = confirm("yes, no");
-// if (x == true){
-//     alert('Подтверждено')
-// } else {
-//     alert('Отменено')
-// }
-
-// let x = prompt('vvedi parol');
-
-// if (x === 'Step' || x === 'Web' || x === 'JavaScript'){
-//     alert('Подтверждено');
+// let age = prompt('Введите ваш возраст');
+// if(age >= 0 && age <= 120){
+//     alert('Возраст корректен');
 // } else{
-//     alert('Отклонено')
+//     alert('Ошибка')
 // }
 
-let x = prompt('vvedi 4islo ot 0 do 100');
+//3
+// let module = prompt('Введите число');
+// alert(`Модуль числа ${module} равняется ${Math.abs(module)}`);
 
-if (x === 0 || x <= 100 && x > 0){
-    alert('prinadlej');
-} else {
-    alert('ne prinadlej');
+//4
+// let hour = Number(prompt('Введите часы'));
+// let min = Number(prompt('Введите минуты'));
+// let sec = Number(prompt('Введите секунды'));
+
+// if(hour <= 23 && hour >=0 || min <= 60 && min >=0 || sec <= 60 && sec >= 0){
+//     alert('Время корректно');
+// } else{
+//     alert('Время не корректно')
+// }
+
+//5
+// let x = prompt('Vvedite X');
+// let y = prompt('vvedite Y');
+
+// if(x > 0 && y > 0){
+//     alert('pervaya');
+// } else if(x<0 && y> 0){
+//     alert('vtoraya');
+// } else if(x< 0 && y<0 ){
+//     alert('tretya');
+// } else if(x > 0 && y < 0){
+//     alert('chetvertaya');
+// } else{
+//     alert('err')
+// }
+
+
+
+//1
+// let month = prompt('Введите номер месяца');
+
+// switch(month){
+//     case '1':
+//         alert('Январь');
+//         break;
+//     case '2':
+//         alert('Февраль');
+//         break;
+//     case '3':
+//         alert('Март');
+//         break;
+//     case '4':
+//         alert('Апрель');
+//         break;
+//     case '5':
+//         alert('Май');
+//         break;
+//         default:
+//             alert('not');
+// }
+
+//2
+// let num1 = +prompt('Введи 1 число');
+// let num2 = +prompt('Введи 2 число')
+// let plus = prompt('Введи знак действия');
+
+// switch(plus){
+//   case '+':
+//       alert(num1 + num2);
+//       break;
+//     case '-':
+//         alert(num1 - num2);
+//         break;
+//     case '*':
+//         alert(num1 * num2);
+//         break;
+//     case '/':
+//         alert(num1 / num2);
+//         break;
+//         default:
+//             alert('err');
+// }
+//1
+// let num = prompt('Введите первое число');
+// let num2 = prompt('Введите второе число');
+
+// num > num2 ? alert('Первое') :alert('Второе');
+
+
+ //2
+// let num = prompt('Введите число');
+// num % 5 == 0 ? alert('Число кратное 5') : alert('не кратное 5')
+
+//3
+// let planet = prompt('Введите название планеты');
+// planet == 'Земля' || planet =='земля' ? alert('Привет Землянин') : alert('Привет инопланетянин');
+
+
+
+
+
+
+
+for( let n = prompt('введите число'); n <= 10; n++ ){
+    if(n % 2 == 0){
+        console.log(n);
+    } else if(n % 2 !== 0){
+        console.log(`нечетное ${n}`);
+    }
 }
+
+
+// for( let n = prompt('введите число'); n >= 10; n--){
+//     if(n % 2 == 0){
+//         console.log(n);
+//     } else if(n % 2 !== 0){
+//         console.log(`нечетное ${n}`)
+//     }
+// }
